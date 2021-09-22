@@ -10,8 +10,7 @@ def buildNumber = currentBuild.number
 /* These platforms correspond to labels in ci.jenkins.io, see:
  *  https://github.com/jenkins-infra/documentation/blob/master/ci.adoc
  */
-List platforms = ['linux']
-Map branches = [:]
+
 
 for (int i = 0; i < platforms.size(); ++i) {
     String label = platforms[i]
@@ -33,7 +32,7 @@ for (int i = 0; i < platforms.size(); ++i) {
                         /* Archive the test results */
                         junit '**/target/surefire-reports/TEST-*.xml'
 
-                        if (label == 'linux') {
+                        if (label == 'ubuntu') {
                             infra.prepareToPublishIncrementals()
                             
                             recordIssues(
