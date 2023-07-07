@@ -1,0 +1,9 @@
+Categories:
+  - fdroidserver
+License: Unknown
+
+Name: Test
+
+AutoUpdateMode: VersionCode
+UpdateCheckMode: Tags
+CurrentVersionCode: 2147483647

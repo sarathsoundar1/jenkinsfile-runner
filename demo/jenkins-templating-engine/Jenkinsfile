@@ -1,3 +1,0 @@
-// comes from the example library
-// that's being loaded via the pipeline_config.groovy
-build()
